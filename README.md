@@ -1,5 +1,5 @@
 Getting-and-Cleaning-Data
 =========================
-###Set the directory correctly.
-###Run run_analysis.R.
-###You'll find "cleaned.txt" in your workspace.
+1.Set the directory correctly.
+2.Run run_analysis.R.
+3.You'll find "cleaned.txt" in your workspace.
