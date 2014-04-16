@@ -4,25 +4,19 @@
 ## Appropriately labels the data set with descriptive activity names.
 ## Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-getdata <- function(x) {
-        # path to project directory
-        directory <- "UCI HAR Dataset/"
-        read.table(paste0(directory, x))
-}
-
 ## Train datasets
-subject_train <- getdata("train/subject_train.txt")
-train_label <- getdata("train/y_train.txt")
-train <- getdata("train/X_train.txt")
+subject_train <- read.table("train/subject_train.txt")
+train_label <- read.table("train/y_train.txt")
+train <- read.table("train/X_train.txt")
 
 ## Test datasets
-subject_test <- getdata("test/subject_test.txt")
-test_label <- getdata("test/y_test.txt")
-test <- getdata("test/X_test.txt")
+subject_test <- read.table("test/subject_test.txt")
+test_label <- read.table("test/y_test.txt")
+test <- read.table("test/X_test.txt")
 
 ## labels
-activity_labels <- getdata("activity_labels.txt")
-features <- getdata("features.txt")
+activity_labels <- read.table("activity_labels.txt")
+features <- read.table("features.txt")
 
 ## Merge
 data <- rbind(train, test)
