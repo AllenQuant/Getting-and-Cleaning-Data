@@ -4,11 +4,11 @@ Uses descriptive activity names to name the activities in the data set.
 Appropriately labels the data set with descriptive activity names. 
 Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-Read Train datasets subject_train <- getdata("train/subject_train.txt")
+Read Train datasets subject_train <- read.table("train/subject_train.txt")
 
-Test datasets subject_test <- getdata("test/subject_test.txt")
+Test datasets subject_test <- read.table("test/subject_test.txt")
 
-Read labels activity_labels <- getdata("activity_labels.txt")
+Read labels activity_labels <- read.table("activity_labels.txt")
 
 Merge dataset data <- rbind(train, test)
 
