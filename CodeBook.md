@@ -18,6 +18,6 @@ Tidy feature names and rename dat clean_features <- sapply(features[, 2], functi
 
 Add subject and activity columns, rename activities
 
-Create dataset with average of each variable for each activity and each subject library(plyr) avgs <- ddply(dat, .(subject, activity), function(x) { cols <- !names(x) %in% c("activity", "subject") apply(x[, cols], 2, function(y) mean(as.numeric(y))) } )
+Create dataset with average of each variable for each activity and each subject library(plyr) avgs <- ddply(data, .(subject, activity), function(x) { cols <- !names(x) %in% c("activity", "subject") apply(x[, cols], 2, function(y) mean(as.numeric(y))) } )
 
 Write data write.table(data, "clean_data.txt")
